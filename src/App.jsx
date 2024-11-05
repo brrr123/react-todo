@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-        <h1>Todo List</h1>
+        <h1>Todo List</h1> 
       <ul>
           { todoList.map(item => <li key={item.id}>{item.title}</li>)}
       </ul>
