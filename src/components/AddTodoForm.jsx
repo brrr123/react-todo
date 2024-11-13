@@ -9,4 +9,4 @@ const AddTodoForm = () => {
     )
 }
 
-export { AddTodoForm }
+export default AddTodoForm
