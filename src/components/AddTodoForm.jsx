@@ -20,4 +20,4 @@ const AddTodoForm = (props) => {
     )
 }
 
-export default AddTodoForm
+export default AddTodoForm;

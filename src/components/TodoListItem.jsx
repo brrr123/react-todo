@@ -4,4 +4,4 @@ const TodoListItem = (props) =>
     )
 
 
-export {TodoListItem}
+export default TodoListItem
