@@ -1,11 +1,11 @@
 import TodoListItem from "./TodoListItem.jsx";
 
-const todoData =[{id:1,title:"Finish the assignment"},{id:2,title:"Cook"}, {id:3,title:"Do laundry"}];
+//const todoData =[{id:1,title:"Finish the assignment"},{id:2,title:"Cook"}, {id:3,title:"Do laundry"}];
 
-const TodoList = () => (
+const TodoList = ({todoList }) => (
         <ul>
 
-            {todoData.map(item =>  <TodoListItem  key={item.id} item={item}/> )}
+            {todoList.map(item =>  <TodoListItem  key={item.id} {...item}/> )}
         </ul>
     )
 
