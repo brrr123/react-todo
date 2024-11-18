@@ -1,11 +1,19 @@
-const AddTodoForm = () => {
+const AddTodoForm = (props) => {
+
+    const handleAddTodo =event =>{
+        event.preventDefault();
+        const todoTitle = event.target.elements.title.value;
+         console.log(todoTitle);
+         props.onAddTodo(todoTitle);
+         event.target.elements.title.value ="";
+    }
     return (
-        <form>
+        <form onSubmit={handleAddTodo}>
             <div>
                 <label htmlFor="todoTitle">Title</label>
             </div>
             <div>
-                <input id="todoTitle"></input>
+                <input name="title" id="todoTitle"></input>
             </div>
             <button>Add</button>
         </form>
@@ -13,4 +21,4 @@ const AddTodoForm = () => {
     )
 }
 
-export default AddTodoForm
+export default AddTodoForm;
