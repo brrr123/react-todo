@@ -11,14 +11,17 @@ const useSemiPersistentState = () => {
 }
 function App() {
     const [todoList, setTodoList ] = useSemiPersistentState( );
-    const addTodo = (newTodo  ) =>{
+    const addTodo = (newTodo) =>{
         setTodoList([newTodo, ...todoList ]);
+    }
+    const removeTodo = (id) => {
+        setTodoList(todoList.filter((data)=>data.id!==id));
     }
     return (
         <>
             <h1>Todo List</h1>
             <AddTodoForm onAddTodo={addTodo}></AddTodoForm>
-            <TodoList todoList={todoList }/>
+            <TodoList  onRemoveTodo={removeTodo} todoList={todoList }/>
         </>
     )
 
