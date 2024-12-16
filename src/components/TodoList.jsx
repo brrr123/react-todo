@@ -1,11 +1,11 @@
 import TodoListItem from "./TodoListItem.jsx";
 
-//const todoData =[{id:1,title:"Finish the assignment"},{id:2,title:"Cook"}, {id:3,title:"Do laundry"}];
 
-const TodoList = ({todoList }) => (
+// eslint-disable-next-line react/prop-types
+const TodoList = ({todoList,onRemoveTodo }) => (
         <ul>
 
-            {todoList.map(item =>  <TodoListItem  key={item.id} {...item}/> )}
+            {todoList.map(item =>  <TodoListItem onRemoveTodo={onRemoveTodo}  key={item.id} {...item}/> )}
         </ul>
     )
 
