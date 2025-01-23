@@ -1,8 +1,8 @@
-import './App.css'
 import TodoList from "./components/TodoList.jsx";
 import AddTodoForm from "./components/AddTodoForm.jsx";
 import React from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import styles from './TodoListItem.module.css'
 
 
 
@@ -72,7 +72,7 @@ function App() {
                         </>
                         ) : (
                             <>
-                                <h1>Todo List</h1>
+                                <h1 className={styles.TodoH1}>Todo List</h1>
                                 <AddTodoForm onAddTodo={addTodo} />
                                 <TodoList  onRemoveTodo={removeTodo} todoList={todoList }/>
                             </>

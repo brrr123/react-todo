@@ -1,4 +1,5 @@
 import React from "react";
+import styles from '../TodoListItem.module.css'
 
 const InputWithLabel = ({
                             id,
@@ -16,7 +17,7 @@ const InputWithLabel = ({
 return    (
         <>
             <label htmlFor={id}>{children}</label>
-            <input ref={inputRef} onChange={onInputChange} value={value} id={id}/>
+            <input className={styles.NewItem} ref={inputRef} onChange={onInputChange} value={value} id={id}/>
         </>
     )
 
