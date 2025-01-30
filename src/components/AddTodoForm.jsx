@@ -1,5 +1,7 @@
 import React from "react";
 import InputWithLabel from "./InputWithLabel.jsx";
+import styles from '../TodoListItem.module.css'
+import Add  from '../assets/add.svg?react';
 
 const AddTodoForm = ({onAddTodo}) => {
     const [todoTitle, setTodoTitle ] = React.useState("");
@@ -49,7 +51,7 @@ const AddTodoForm = ({onAddTodo}) => {
     return (
         <form onSubmit={handleAddTodo}>
             <InputWithLabel isFocused={true} onInputChange={handleTitleChange} value={todoTitle} id="todoTitle">Title</InputWithLabel>
-            <button>Add</button>
+            <button><Add className={styles.TodoButton} /></button>
         </form>
 
     )

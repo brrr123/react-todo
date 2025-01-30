@@ -1,0 +1,83 @@
+.ListItem {
+    color: #888888;
+    list-style-type: square;
+    padding: 0.25em;
+}
+body {
+    background-color: #c0c0c0;
+    color: #ff0000;
+    font-family: Arial, sans-serif;
+}
+label {
+    padding: 0.5em;
+    font-weight: bold;
+}
+button
+{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+.TodoButton{
+    height:20px ;
+    width: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.TodoH1{
+    color: #000000 ;
+    font-size: 3em;
+    font-weight: bold;
+
+}
+.NewItem
+{
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 1px solid #000000;
+    border-radius: 0.5em;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+
+    .TodoH1 {
+        font-size: 2em;
+    }
+    .ListItem {
+        font-size: 1em;
+    }
+    .TodoButton {
+        height: 15px;
+        width: 15px;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .TodoH1 {
+        font-size: 2.5em;
+    }
+    .ListItem {
+        font-size: 1.2em;
+    }
+    .TodoButton {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    .TodoH1 {
+        font-size: 3em;
+    }
+    .ListItem {
+        font-size: 1.5em;
+    }
+    .TodoButton {
+        height: 20px;
+        width: 20px;
+    }
+}
