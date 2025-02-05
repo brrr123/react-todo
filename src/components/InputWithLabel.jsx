@@ -1,5 +1,6 @@
 import React from "react";
-import styles from '../TodoListItem.module.css'
+import styles from './TodoListItem.module.css'
+import PropTypes from "prop-types";
 
 const InputWithLabel = ({
                             id,
@@ -8,6 +9,13 @@ const InputWithLabel = ({
                             onInputChange,
                             children,
                         }) => {
+    InputWithLabel.propTypes = {
+        id: PropTypes.string,
+        value: PropTypes.string,
+        isFocused: PropTypes.bool,
+        onInputChange: PropTypes.func,
+        children: PropTypes.string
+    }
     const inputRef = React.useRef();
     React.useEffect(() => {
         if (isFocused && inputRef.current) {

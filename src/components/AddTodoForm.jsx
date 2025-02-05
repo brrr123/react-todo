@@ -1,9 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 import InputWithLabel from "./InputWithLabel.jsx";
-import styles from '../TodoListItem.module.css'
+import styles from './TodoListItem.module.css'
 import Add  from '../assets/add.svg?react';
 
 const AddTodoForm = ({onAddTodo}) => {
+    AddTodoForm.propTypes = {
+        onAddTodo: PropTypes.func
+    }
     const [todoTitle, setTodoTitle ] = React.useState("");
     const handleTitleChange = event =>{
         const newTodoTitle = event.target.value;
