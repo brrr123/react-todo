@@ -1,0 +1,10 @@
+.TextContainer{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+}
+
+.TextContainer p{
+     line-height: 1.5;
+}
